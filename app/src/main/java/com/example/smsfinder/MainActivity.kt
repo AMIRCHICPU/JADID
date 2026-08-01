@@ -12,10 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
-/**
- * صفحه اصلی: اینجا کلمه رمز (کد فعال‌سازی پیامکی) و وضعیت مجوزها را تنظیم می‌کنیم.
- * این اپ باید *قبل از گم شدن گوشی* نصب و راه‌اندازی شود.
- */
 class MainActivity : AppCompatActivity() {
 
     private val requiredPermissions = mutableListOf(
@@ -63,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "\u0630\u062e\u06cc\u0631\u0647 \u0634\u062f. \u0627\u06a9\u0646\u0648\u0646 \u0628\u0631\u0627\u06cc \u067e\u06cc\u062f\u0627 \u06a9\u0631\u062f\u0646 \u06af\u0648\u0634\u06cc\u060c \u067e\u06cc\u0627\u0645\u06a9\u06cc \u062d\u0627\u0648\u06cc \u0627\u06cc\u0646 \u06a9\u0644\u0645\u0647 \u0628\u0641\u0631\u0633\u062a", Toast.LENGTH_LONG).show()
         }
 
-        btnGrantPermissions.setOnClickListener {
+        btnGrant.setOnClickListener {
             ActivityCompat.requestPermissions(this, requiredPermissions, 1001)
         }
 
